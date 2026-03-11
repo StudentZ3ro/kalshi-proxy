@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const t = ticker.toUpperCase();
     const series = t.split('-')[0];
     const r = await fetch(
-      `https://api.elections.kalshi.com/v1/series/${series}/events/${t}?with_markdown=true``
+      `https://api.elections.kalshi.com/v1/series/${series}/events/${t}?with_markdown=true`
     );
     const data = await r.json();
     res.status(200).json(data);
